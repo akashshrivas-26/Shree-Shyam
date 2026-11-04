@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/photo.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #e2e8f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .contact-form {
+            width: 400px;
+            max-width: 90%;
+            margin: 40px auto;
+            padding: 25px;
+            background-color: white;
+            border: 2px solid #2563eb;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1d4ed8;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #94a3b8;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #2563eb;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1e3a8a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">TechZone</div>
+
+        <nav>
+            <a href="Program1.html">program1</a>
+            <a href="Program2.html">program2</a>
+            <a href="Program3.html">program3</a>
+            <a href="Program4.html">program4</a>
+            <a href="Program5.html">program5</a>
+        </nav>
+    </header>
+      <div class="profile-card">
+
+        <img src=""
+            alt="Profile Image"
+        >
+
+        <h2>Rahul Sharma</h2>
+
+        <h3>Web Developer</h3>
+
+        <p>
+            I am a passionate web developer.
+            I enjoy creating modern and user-friendly websites
+            using HTML and CSS.
+        </p>
+
+    </div>
+    
+    
+
+    <div class="contact-form">
+
+        <h2>Contact Us</h2>
+
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name"
+                   placeholder="Enter your full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email"
+                   placeholder="Enter your email" required>
+
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile"
+                   placeholder="Enter mobile number" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="4"
+                      placeholder="Enter your message"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+      <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <h2>TechZone</h2>
+                <p>
+                    TechZone provides modern web development,
+                    graphic designing and digital marketing
+                    services for businesses.
+                </p>
+            </div>
+
+            <div class="footer-box">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h2>Contact Us</h2>
+                <p>Email: info@techzone.com</p>
+                <p>Phone: +91 9876543210</p>
+                <p>Address: Ahmedabad, Gujarat</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 TechZone. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>

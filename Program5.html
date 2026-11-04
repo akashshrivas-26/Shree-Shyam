@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Website Footer</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/photo.css">
+    <link rel="stylesheet" href="css/Form.css">
+    <link rel="stylesheet" href="css/Service.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        footer {
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 40px 30px 15px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-box {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px;
+        }
+
+        .footer-box h2 {
+            color: #38bdf8;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .footer-box p {
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        .footer-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-box li {
+            margin-bottom: 12px;
+        }
+
+        .footer-box a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+
+        .footer-box a:hover {
+            color: #38bdf8;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #475569;
+            text-align: center;
+            padding-top: 15px;
+            margin-top: 25px;
+            color: #cbd5e1;
+        }
+    </style>
+</head>
+
+<body>
+     <header>
+        <div class="logo">TechZone</div>
+
+        <nav>
+            <a href="Program1.html">program1</a>
+            <a href="Program2.html">program2</a>
+            <a href="Program3.html">program3</a>
+            <a href="Program4.html">program4</a>
+            <a href="Program5.html">program5</a>
+        </nav>
+    </header>
+     <div class="profile-card">
+
+        <img src=""
+            alt="Profile Image"
+        >
+
+        <h2>Rahul Sharma</h2>
+
+        <h3>Web Developer</h3>
+
+        <p>
+            I am a passionate web developer.
+            I enjoy creating modern and user-friendly websites
+            using HTML and CSS.
+        </p>
+
+    </div>
+     <div class="contact-form">
+
+        <h2>Contact Us</h2>
+
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name"
+                   placeholder="Enter your full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email"
+                   placeholder="Enter your email" required>
+
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile"
+                   placeholder="Enter mobile number" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="4"
+                      placeholder="Enter your message"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+
+     <h1>Our Services</h1>
+
+    <div class="services">
+
+        <div class="card">
+            <h2>Web Development</h2>
+            <p>
+                We create modern, responsive and
+                user-friendly websites for businesses.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Graphic Designing</h2>
+            <p>
+                We design creative logos, banners,
+                posters and social media graphics.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Digital Marketing</h2>
+            <p>
+                We help businesses grow through
+                online advertising and social media.
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <h2>TechZone</h2>
+                <p>
+                    TechZone provides modern web development,
+                    graphic designing and digital marketing
+                    services for businesses.
+                </p>
+            </div>
+
+            <div class="footer-box">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h2>Contact Us</h2>
+                <p>Email: info@techzone.com</p>
+                <p>Phone: +91 9876543210</p>
+                <p>Address: Ahmedabad, Gujarat</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 TechZone. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>

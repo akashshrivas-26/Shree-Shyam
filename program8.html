@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shree Shyam | Wholesale Disposable Products</title>
+
+    <meta name="description"
+          content="Shree Shyam Ahmedabad - wholesale paper plates, glasses, dona, pattal and disposable dishes. Contact us for bulk orders.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --green: #174d35;;
+            --dark-green: #103624;
+            --orange: #ffbd45;
+            --light: #f5f8f2;
+            --white: #ffffff;
+            --pedding:20px;
+        }
+
+        body {
+            background: var(--light);
+            color: #25352b;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+
+        header {
+            background: var(--green);
+            color: white;
+            padding: 16px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: var(--orange);
+        }
+
+        .tagline {
+            font-size: 12px;
+            color: #e5eee7;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: var(--orange);
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            background: linear-gradient(120deg, #103624, #328054);
+            color: white;
+            padding: 75px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero-label {
+            display: inline-block;
+            background: #ffffff20;
+            padding: 7px 14px;
+            border-radius: 25px;
+            margin-bottom: 18px;
+            color: #ffda91;
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 5vw, 52px);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--orange);
+        }
+
+        .hero p {
+            margin-bottom: 25px;
+            color: #edf5ee;
+        }
+
+        .hero-image {
+            min-width: 200px;
+            font-size: 115px;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--orange);
+            color: #26352b;
+            text-decoration: none;
+            border: none;
+            padding: 13px 22px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #ffd27c;
+        }
+
+        /* WHOLESALE BENEFITS */
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background: white;
+            padding: 25px 6%;
+            gap: 20px;
+            text-align: center;
+            box-shadow: 0 3px 12px #00000008;
+        }
+
+        .benefit strong {
+            display: block;
+            color: var(--green);
+            font-size: 18px;
+        }
+
+        .benefit span {
+            color: #667168;
+            font-size: 14px;
+        }
+
+        /* GENERAL SECTION */
+
+        section {
+            padding: 60px 6%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title h2 {
+            color: var(--green);
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: #68736a;
+        }
+
+        /* SEARCH */
+
+        .search-box {
+            max-width: 650px;
+            margin: 0 auto 22px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccd7ce;
+            border-radius: 7px;
+            font-size: 16px;
+            outline-color: var(--green);
+        }
+        /* CATEGORY FILTER */
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+
+        .filters button {
+            padding: 10px 17px;
+            border: 1px solid var(--green);
+            background: white;
+            color: var(--green);
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .filters button.active,
+        .filters button:hover {
+            background: var(--green);
+            color: white;
+        }
+
+        /* PRODUCT GRID */
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px #00000010;
+            transition: transform 0.25s;
+            border: 1px solid #e7ece7;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            background: #eaf3e9;
+            height: 155px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 76px;
+        }
+
+        .product-info {
+            padding: 18px;
+        }
+
+        .product-info h3 {
+            color: #24392b;
+            font-size: 19px;
+            margin-bottom: 7px;
+        }
+
+        .product-info p {
+            color: #6b756d;
+            font-size: 14px;
+            min-height: 44px;
+        }
+
+        .price {
+            color: #187544;
+            font-size: 17px;
+            font-weight: bold;
+            margin: 13px 0;
+        }
+
+        .order-btn {
+            width: 100%;
+            background: #218c50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 12px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .order-btn:hover {
+            background: #176c40;
+        }
+
+        .no-products {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: #e8f1e8;
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .about-content p {
+            margin: 15px 0 22px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: white;
+            text-align: center;
+        }
+
+        .contact-details {
+            max-width: 520px;
+            margin: auto;
+            background: var(--light);
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .contact-details p {
+            margin: 12px 0;
+        }
+
+        .contact-details strong {
+            color: var(--green);
+        }
+
+        .contact .btn {
+            margin-top: 18px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: var(--dark-green);
+            color: white;
+            text-align: center;
+            padding: 25px 6%;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        .footer-small {
+            color: #cfdfd2;
+            font-size: 13px;
+        }
+
+        /* FLOATING WHATSAPP */
+
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 10;
+            background: #20b85a;
+            color: white;
+            padding: 13px 18px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 12px #00000030;
+        }
+
+        .whatsapp:hover {
+            background: #168e43;
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 1000px) {
+            .products {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .hero-image {
+                font-size: 90px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 50px 6%;
+            }
+
+            .hero-image {
+                min-width: auto;
+                font-size: 80px;
+            }
+
+            .benefits {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 45px 5%;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+        .product-image {
+            width: 100%;
+            height: 180px;
+            background: #eaf3e9;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            padding: 5px;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+        <div>
+            <div class="logo">Shree <span>Shyam</span></div>
+            <div class="tagline">WHOLESALE DISPOSABLE PRODUCTS</div>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero" id="home">
+            <div class="hero-content">
+
+                <div class="hero-label">
+                    Wholesale Supplier · Ahmedabad
+                </div>
+
+                <h1>
+                    Your Wholesale Partner for
+                    <span>Disposable Products</span>
+                </h1>
+
+                <p>
+                    Paper plates, paper glasses, dona, pattal and
+                    disposable dishes for shops, restaurants, caterers
+                    and event businesses. Contact us for bulk quantities
+                    and wholesale prices.
+                </p>
+
+                <a href="#products" class="btn">
+                    Explore Products
+                </a>
+
+                <a href="#contact"
+                   class="btn"
+                   style="margin-left: 8px; background: white;">
+                    Contact Us
+                </a>
+            </div>
+
+            <div class="hero-image" aria-label="Disposable tableware">
+                🍽️ 🥤
+            </div>
+        </section>
+
+        <!-- BENEFITS -->
+
+        <div class="benefits">
+            <div class="benefit">
+                <strong>📦 Wholesale Orders</strong>
+                <span>Enquire about bulk quantities</span>
+            </div>
+
+            <div class="benefit">
+                <strong>🍽️ Multiple Products</strong>
+                <span>Plates, glasses, dona and pattal</span>
+            </div>
+
+            <div class="benefit">
+                <strong>📍 Ahmedabad</strong>
+                <span>Contact our shop directly</span>
+            </div>
+        </div>
+
+        <!-- PRODUCTS -->
+
+        <section id="products">
+
+            <div class="section-title">
+                <h2>Our Products</h2>
+                <p>Choose a product and enquire about wholesale rates.</p>
+            </div>
+
+            <div class="search-box">
+                <input
+                    type="search"
+                    id="search"
+                    placeholder="Search paper plates, glasses, dona..."
+                    aria-label="Search products">
+            </div>
+
+            <div class="filters">
+                <button class="active" data-category="All">All Products</button>
+                <button data-category="Plates">Paper Plates</button>
+                <button data-category="Glasses">Glasses & Cups</button>
+                <button data-category="Dona">Dona & Pattal</button>
+                <button data-category="Dishes">Disposable Dishes</button>
+            </div>
+
+            <div class="products" id="product-list"></div>
+
+        </section>
+
+        <!-- ABOUT -->
+
+        <section class="about" id="about">
+            <div class="about-content">
+
+                <div class="section-title">
+                    <h2>About Shree Shyam</h2>
+                </div>
+
+                <p>
+                    Shree Shyam is a wholesale disposable products
+                    business based in Ahmedabad, Gujarat. We offer a
+                    range of disposable tableware for retailers,
+                    caterers, restaurants, event organisers and other
+                    bulk buyers.
+                </p>
+
+                <p>
+                    Contact us to ask about product sizes, packing,
+                    minimum order quantities and wholesale prices.
+                </p>
+
+                <a href="#contact" class="btn">Enquire Now</a>
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+
+        <section class="contact" id="contact">
+
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>For wholesale enquiries and bulk orders.</p>
+            </div>
+
+            <div class="contact-details">
+                <p><strong>Business:</strong> Shree Shyam</p>
+                <p><strong>Business Type:</strong> Wholesale</p>
+                <p><strong>Location:</strong> Ahmedabad, Gujarat</p>
+                <p><strong>WhatsApp:</strong> +91 87806 84312</p>
+
+                <a
+                    href="https://wa.me/918780684312?text=Hello%20Shree%20Shyam%2C%20I%20want%20to%20enquire%20about%20wholesale%20disposable%20products."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn">
+                    Enquire on WhatsApp
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p><strong>Shree Shyam</strong></p>
+
+        <p>
+            Wholesale Paper Plates | Glasses | Dona | Pattal | Dishes
+        </p>
+
+        <p class="footer-small">
+            Ahmedabad, Gujarat
+        </p>
+
+        <p class="footer-small">
+            &copy; <span id="year"></span> Shree Shyam. All Rights Reserved.
+        </p>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+
+    <a
+        class="whatsapp"
+        href="https://wa.me/918780684312?text=Hello%20Shree%20Shyam%2C%20please%20share%20your%20wholesale%20catalogue."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contact Shree Shyam on WhatsApp">
+        WhatsApp Us
+    </a>
+
+    <script>
+        // PRODUCT DATA
+
+        const products = [
+            {
+                name: "Paper Plates",
+                category: "Plates",
+                icon: "🍽️",
+                description: "Paper plates in different sizes.",
+                price: "Enquire for wholesale price"
+            },
+            {
+                name: "Silver Paper Plates",
+                category: "Plates",
+                icon: "🥘",
+                description: "Plates for parties and food serving.",
+                price: "Enquire for wholesale price"
+            },
+            {
+                name: "Paper Tea Cups",
+                category: "Glasses",
+                icon: "☕",
+                description: "Disposable cups for tea and coffee.",
+                price: "Enquire for wholesale price"
+            },
+            {
+                name: "Disposable Glasses",
+                category: "Glasses",
+                icon: "🥤",
+                description: "Disposable drinking glasses.",
+                price: "Enquire for wholesale price"
+            },
+            {
+                name: "Paper Dona",
+                category: "Dona",
+                icon: "🥣",
+                description: "Dona for snacks and food serving.",
+                price: "Enquire for wholesale price"
+            },
+            {
+                name: "Leaf Pattal",
+                category: "Dona",
+                icon: "🌿",
+                description: "Traditional leaf plates for functions.",
+                price: "Enquire for wholesale price"
+            },
+            {
+                name: "Disposable Dishes",
+                category: "Dishes",
+                icon: "🍛",
+                description: "Disposable dishes for meals and events.",
+                price: "Enquire for wholesale price"
+            },
+            {
+                name: "Compartment Plates",
+                category: "Dishes",
+                icon: "🍱",
+                description: "Divided plates for meal serving.",
+                price: "Enquire for wholesale price"
+            }
+        ];
+
+        let selectedCategory = "All";
+
+        const productList = document.getElementById("product-list");
+        const searchInput = document.getElementById("search");
+        const filterButtons = document.querySelectorAll(".filters button");
+
+        // DISPLAY PRODUCTS
+
+        function showProducts() {
+            const searchText = searchInput.value
+                .trim()
+                .toLowerCase();
+
+            const filteredProducts = products.filter(product => {
+                const categoryMatch =
+                    selectedCategory === "All" ||
+                    product.category === selectedCategory;
+
+                const searchMatch =
+                    product.name.toLowerCase().includes(searchText) ||
+                    product.description.toLowerCase().includes(searchText) ||
+                    product.category.toLowerCase().includes(searchText);
+
+                return categoryMatch && searchMatch;
+            });
+
+            if (filteredProducts.length === 0) {
+                productList.innerHTML = `
+                    <div class="no-products">
+                        <h3>No products found</h3>
+                        <p>Try searching for another product.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            productList.innerHTML = filteredProducts.map(product => `
+                <article class="product-card">
+                    <div class="product-image">
+                        ${product.icon}
+                    </div>
+
+                    <div class="product-info">
+                        <h3>${product.name}</h3>
+
+                        <p>${product.description}</p>
+
+                        <div class="price">
+                            ${product.price}
+                        </div>
+
+                        <button
+                            class="order-btn"
+                            data-product="${product.name}">
+                            Enquire / Order
+                        </button>
+                    </div>
+                </article>
+            `).join("");
+        }
+
+        // CATEGORY FILTERS
+
+        filterButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                selectedCategory = button.dataset.category;
+
+                filterButtons.forEach(item => {
+                    item.classList.remove("active");
+                });
+
+                button.classList.add("active");
+
+                showProducts();
+            });
+        });
+
+        // PRODUCT SEARCH
+
+        searchInput.addEventListener("input", showProducts);
+
+        // WHATSAPP PRODUCT ENQUIRY
+
+        productList.addEventListener("click", event => {
+            const button = event.target.closest(".order-btn");
+
+            if (!button) {
+                return;
+            }
+
+            const productName = button.dataset.product;
+
+            const message =
+                `Hello Shree Shyam, I want to enquire about ${productName}. Please share your wholesale price, packing details and minimum order quantity.`;
+
+            const whatsappURL =
+                "https://wa.me/918780684312?text=" +
+                encodeURIComponent(message);
+
+            window.open(
+                whatsappURL,
+                "_blank",
+                "noopener,noreferrer"
+            );
+        });
+
+        // CURRENT YEAR
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        // INITIAL DISPLAY
+
+        showProducts();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f6fb">
+    <title>Contact Us | Let's Talk</title>
+    <link rel="stylesheet" href="css/Form2.css">
+</head>
+<body>
+    <main class="contact-card">
+        <aside class="contact-info">
+            <div class="brand-mark" aria-hidden="true">✦</div>
+            <p class="eyebrow">WE’D LOVE TO HEAR FROM YOU</p>
+            <h1>Let’s start a conversation.</h1>
+            <p class="intro">
+                Have a question, an idea, or just want to say hello? Send us a message
+                and we’ll get back to you soon.
+            </p>
+
+            <div class="info-list">
+                <div class="info-item">
+                    <span class="info-icon" aria-hidden="true">@</span>
+                    <div>
+                        <span class="info-label">EMAIL US</span>
+                        <a href="mailto:hello@example.com">hello@example.com</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon" aria-hidden="true">↗</span>
+                    <div>
+                        <span class="info-label">RESPONSE TIME</span>
+                        <span>Usually within one business day</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="decoration decoration-one" aria-hidden="true"></div>
+            <div class="decoration decoration-two" aria-hidden="true"></div>
+        </aside>
+
+        <section class="form-panel" aria-labelledby="form-title">
+            <p class="form-step">CONTACT FORM <span>·</span> 01</p>
+            <h2 id="form-title">Send us a message</h2>
+            <p class="form-description">Fill in the details below and we’ll be in touch.</p>
+
+            <form action="#" method="post">
+                <div class="field-row">
+                    <div class="field">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" name="name"
+                               placeholder="e.g. Alex Morgan" autocomplete="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="email"
+                               placeholder="alex@example.com" autocomplete="email" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="subject">What’s this about?</label>
+                    <input type="text" id="subject" name="subject"
+                           placeholder="How can we help?" required>
+                </div>
+
+                <div class="field">
+                    <label for="message">Your message</label>
+                    <textarea id="message" name="message" rows="5"
+                              placeholder="Tell us a little more..." required></textarea>
+                </div>
+
+                <button type="submit">
+                    <span>Send message</span>
+                    <span class="button-arrow" aria-hidden="true">→</span>
+                </button>
+                <p class="privacy-note">We’ll only use your details to reply to your message.</p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
